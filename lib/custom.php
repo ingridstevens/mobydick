@@ -17,3 +17,28 @@ function my_font_scripts () {
 	// load webfonts script
 	wp_enqueue_style( 'custom-fonts', 'http://fonts.googleapis.com/css?family=Titillium+Web:300' );
 }
+
+add_filter('piklist_post_types', 'chapter_post_type');
+function chapter_post_type($post_types)
+{
+  $post_types['demo'] = array(
+    'labels' => piklist('post_type_labels', 'Chapter')
+    ,'public' => true
+    ,'rewrite' => array(
+      'slug' => 'chapter'
+    )
+    ,'supports' => array(
+      'author'
+      ,'revisions'
+    )
+    ,'hide_meta_box' => array(
+      'slug'
+      ,'author'
+      ,'revisions'
+      ,'comments'
+      ,'commentstatus'
+    )
+  );
+ 
+  return $post_types;
+}
