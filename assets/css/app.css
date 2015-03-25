@@ -5778,63 +5778,9 @@ button.close {
 /* ==========================================================================
    Base
    ========================================================================== */
-.wrap.container {
-  background: none repeat scroll 0 0 white;
-  margin-top: -22px;
-  padding-top: 50px;
-}
-.btn-donate {
-  border-radius: 0px;
-  background-color: #ff7200;
-  color: white;
-  margin: 5px 0px;
-}
-.btn-cbc {
-  background-color: #29427b;
-  border-radius: 0px;
-  color: white;
-  border: 2px solid #29427b;
-}
-.btn-cbc:hover,
-.btn-cbc:focus {
-  background-color: white;
-  color: #29427b;
-}
-.donate .btn-donate,
-footer .btn-donate {
-  width: 100%;
-}
 /* ==========================================================================
    Header
    ========================================================================== */
-.donate-button form {
-  float: right;
-  margin-top: 10px;
-}
-.container.donate a {
-  text-decoration: none;
-}
-.container.primary-nav {
-  background: none repeat scroll 0 0 #6378aa;
-  width: 100%;
-  padding-right: 50px;
-}
-.navbar-default .navbar-nav > li > a {
-  color: white;
-  font-family: Titillium Web;
-  font-size: 20px;
-  font-weight: 300;
-}
-.donate {
-  padding-top: 20px;
-}
-.navbar-static-top {
-  border-width: 0;
-  z-index: 1000;
-}
-.navbar-header {
-  height: 100px;
-}
 /* ==========================================================================
    Content
    ========================================================================== */
@@ -5849,10 +5795,6 @@ main {
 /* ==========================================================================
    Primary Content
    ========================================================================== */
-/* Gallery Shortcode */
-.gallery-row {
-  padding: 15px 0;
-}
 /* ==========================================================================
    Sidebar
    ========================================================================== */
@@ -5862,32 +5804,6 @@ main {
 /* ==========================================================================
    Footer
    ========================================================================== */
-footer {
-  color: white;
-  background: #29427B;
-  padding-top: 50px;
-}
-footer .footer.container {
-  margin-top: -30px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-footer .footer.container a {
-  color: white;
-}
-footer .footer.container .mailchimp-form {
-  margin-bottom: 20px;
-}
-footer .footer.container .social img {
-  padding-right: 10px;
-  float: left;
-}
-footer .copyright.container {
-  width: 100%;
-  background: #141f3a;
-  color: #6378aa;
-  padding: 20px 0 10px;
-}
 /* ==========================================================================
    WordPress Generated Classes
    See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
