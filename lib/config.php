@@ -51,6 +51,7 @@ function chapter_post_type($post_types) {
     		,'editor'
     		,'title'
             ,'thumbnail'
+            ,'order'
     	)
     	,'hide_meta_box' => array(
     		'slug'

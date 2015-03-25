@@ -15,5 +15,5 @@ define( 'img_dir', get_stylesheet_directory_uri().'/assets/img/' );
 add_action( 'wp_enqueue_scripts', 'my_font_scripts', 2 );
 function my_font_scripts () {
 	// load webfonts script
-	wp_enqueue_style( 'custom-fonts', 'http://fonts.googleapis.com/css?family=Titillium+Web:300' );
+	wp_enqueue_style( 'custom-fonts', 'http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' );
 }

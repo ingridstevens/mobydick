@@ -4,37 +4,111 @@
 
 @import "bootstrap/bootstrap.less";
 @import "variables.less";
+//@import "/css/MyFontsWebfontsKit.css";
+
+//@import url("//hello.myfonts.net/count/2dbeef");
+
+@font-face {
+    font-family: 'Sexsmith-Regular';
+    src: url('../fonts/webfonts/2DBEEF_0_0.eot');
+    src: url('../fonts/webfonts/2DBEEF_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/webfonts/2DBEEF_0_0.woff2') format('woff2'),url('../fonts/webfonts/2DBEEF_0_0.woff') format('woff'),url('../fonts/webfonts/2DBEEF_0_0.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Oranienbaum-Regular';
+    src: url('../fonts/webfonts/Oranienbaum-Regular.ttf');
+}
+
+
 
 /* ==========================================================================
    Base
    ========================================================================== */
+    html {
+       min-height: 100%;
+       position: relative;
+    }
+    p {
+        text-indent: 2em;
+    }
+    .small-caps {
+        font-variant: small-caps;
+    }
+    .wrap.container {
+        margin-bottom: 150px;
+    }
+
 
 /* ==========================================================================
    Header
    ========================================================================== */
-
+.navbar-nav > li > a {
+    font-variant: small-caps;
+}
 /* ==========================================================================
    Content
    ========================================================================== */
-
-.content { }
-//HOME PAGE
-
-.container.mission {
-    background: @blue-light;
-    width: 100%;
-    margin-bottom: 0px;
+//Page Title
+.page-header {
+    h1 {
+        text-transform: uppercase;
+        text-align: center;
+        font-family: 'Oranienbaum-Regular', 'Sexsmith-Regular';
+        letter-spacing: 9px;
+        .title {
+            line-height: 2.5;
+        }
+        .small {
+            color: black;
+            font-size: 12px;
+            line-height: 5.5;
+            letter-spacing: 3px;
+        }
+        .author {
+            font-size: 22px;
+        }
+    }
 }
 
-main {
-    margin: 30px 0;
+h2 {
+    text-align: center;
+    font-variant: small-caps;
 }
+
+//Table of Contents
+
+.table-of-contents ul li a br {
+    display: none; //don't reflect the styles in the title in the chapter listing
+}
+.table-of-contents ul li a {
+    font-size: 17px;
+    span.small {
+        font-size: 17px!important;
+    }
+}
+
+//Chapter Pages
+
+.single-chapter {
+    .page-header {
+        h1 {
+            .small {
+                color: black;
+                font-size: 20px;
+                line-height: 5.5;
+            }
+        }
+    }
+}
+
 
 /* ==========================================================================
    Primary Content
    ========================================================================== */
 
-.main { }
+.main {
+    font-family: 'Droid Serif', serif;
+}
 
 
 
@@ -64,7 +138,13 @@ main {
 
 .content-info { }
 
-
+.footer {
+    background-color: #f5f5f5;
+    bottom: 0;
+    height: 60px;
+    position: absolute;
+    width: 100%;
+}
 
 /* ==========================================================================
    WordPress Generated Classes
