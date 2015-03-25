@@ -70,7 +70,9 @@ function chapter_post_type($post_types) {
  * See lib/sidebar.php for more details
  */
 function roots_display_sidebar() {
-  $sidebar_config = new Roots_Sidebar(
+    return false;
+    $sidebar_config = new Roots_Sidebar(
+
     /**
      * Conditional tag checks (http://codex.wordpress.org/Conditional_Tags)
      * Any of these conditional tags that return true won't show the sidebar
@@ -96,7 +98,6 @@ function roots_display_sidebar() {
 
   return apply_filters('roots_display_sidebar', $sidebar_config->display);
 }
-define( 'MCW_TICKETS_REVIEW_URL', home_url( '/membership-review/' ) );
 
 /**
  * $content_width is a global variable used by WordPress for max image upload sizes
