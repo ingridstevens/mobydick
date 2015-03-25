@@ -36,6 +36,34 @@ function roots_sidebar_class() {
   return 'col-sm-4';
 }
 
+// add Chapter Post Type
+add_filter('piklist_post_types', 'chapter_post_type');
+function chapter_post_type($post_types) {
+	$post_types['chapter'] = array(
+		'labels' => piklist('post_type_labels', 'Chapter')
+		,'public' => true
+		,'rewrite' => array(
+			'slug' => 'chapter'
+		)
+    	,'supports' => array(
+    		'author'
+    		,'revisions'
+    		,'editor'
+    		,'title'
+            ,'thumbnail'
+    	)
+    	,'hide_meta_box' => array(
+    		'slug'
+    		,'author'
+    		,'revisions'
+    		,'comments'
+    		,'commentstatus'
+    	)
+	);
+
+	return $post_types;
+}
+
 /**
  * Define which pages shouldn't have the sidebar
  *
