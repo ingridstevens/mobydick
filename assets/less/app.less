@@ -24,26 +24,56 @@
 /* ==========================================================================
    Base
    ========================================================================== */
-    html {
-       min-height: 100%;
-       position: relative;
-    }
-    p {
-        text-indent: 2em;
-    }
-    .small-caps {
-        font-variant: small-caps;
-    }
-    .wrap.container {
-        margin-bottom: 150px;
-    }
-
+html {
+   min-height: 100%;
+   position: relative;
+}
+p {
+    text-indent: 2em;
+}
+.small-caps {
+    font-variant: small-caps;
+}
+.wrap.container {
+    margin-bottom: 150px;
+}
+body {
+    color: black;
+}
 
 /* ==========================================================================
    Header
    ========================================================================== */
 .navbar-nav > li > a {
     font-variant: small-caps;
+}
+.navbar-nav li {
+    display: inline;
+}
+//
+
+.navbar-collapse {
+    text-align: center;
+}
+
+.navbar-collapse .nav {
+    display:inline-block;
+    float: none;
+    margin-bottom: -7px;
+}
+
+
+
+//HAMBURGER MENU
+
+.navbar-default .navbar-toggle {
+    border: medium none;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #333;
+    border-radius: 2px;
+    height: 4px;
+    width: 30px;
 }
 /* ==========================================================================
    Content
@@ -60,7 +90,7 @@
         }
         .small {
             color: black;
-            font-size: 12px;
+            font-size: 15px;
             line-height: 5.5;
             letter-spacing: 3px;
         }
@@ -71,8 +101,18 @@
 }
 
 h2 {
+//    text-align: center;
+//    font-variant: small-caps;
+    text-transform: uppercase;
     text-align: center;
-    font-variant: small-caps;
+    font-family: 'Oranienbaum-Regular', 'Sexsmith-Regular';
+    letter-spacing: 3px;
+    &.small {
+        color: black;
+        font-size: 20px;
+        line-height: 2.5;
+        letter-spacing: 3px;
+    }
 }
 
 //Table of Contents
@@ -81,15 +121,19 @@ h2 {
     display: none; //don't reflect the styles in the title in the chapter listing
 }
 .table-of-contents ul li a {
-    font-size: 17px;
+    font-size: 18px;
     span.small {
-        font-size: 17px!important;
+        font-size: 18px!important;
     }
 }
 
 //Chapter Pages
 
 .single-chapter {
+    .content {
+        line-height: 1.5;
+        text-align: justify;
+    }
     .page-header {
         h1 {
             .small {
@@ -101,6 +145,36 @@ h2 {
     }
 }
 
+// Links to previous and next chapter
+
+.chapter-links {
+    list-style: none;
+    padding-left: 0;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    li {
+        display: inline;
+        a {
+            font-size: 15px;
+        }
+    }
+}
+.toc {
+    font-size: 15px;
+}
+
+
+//HOME page
+.home {
+    h2 {
+        margin-top: 50px;
+        margin-bottom: 20px
+    }
+    main {
+        line-height: 1.5;
+        text-align: justify;
+    }
+}
 
 /* ==========================================================================
    Primary Content
