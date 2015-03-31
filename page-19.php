@@ -3,7 +3,7 @@
 <?php $args = array(
 	'posts_per_page'   => -1,
 	'orderby'          => 'menu_order',
-	'order'            => 'DESC',
+	'order'            => 'ASC',
 	'post_type'        => 'chapter',
 	'post_status'      => 'publish',
 	'suppress_filters' => true

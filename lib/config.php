@@ -51,15 +51,16 @@ function chapter_post_type($post_types) {
     		,'editor'
     		,'title'
             ,'thumbnail'
-            ,'order'
+        //    ,'order'
     	)
-    	,'hide_meta_box' => array(
-    		'slug'
-    		,'author'
-    		,'revisions'
-    		,'comments'
-    		,'commentstatus'
-    	)
+		,'hierarchical' => true //makes it so they are draggable
+		,'menu_icon' => 'dashicons-book-alt'
+		,'has_archive' => true
+	//	,'rewrite' => false ___ MAkES IT ?chapter= //
+		,'edit_columns' => array(
+			'title' => __('Chapters')
+			,'author' => __('Created by ')
+		)
 	);
 
 	return $post_types;

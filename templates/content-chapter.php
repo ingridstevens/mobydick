@@ -10,7 +10,7 @@
 <hr>
 <ul class="chapter-links">
     <li class="pull-left">
-        <?php if(get_previous_post()) { previous_post_link('%link', '&laquo; Previous Chapter'); } ?>
+        <?php if(get_previous_post()) { previous_post_link_plus( array('post_type' => ' "chapter" ', 'link' => 'Previous Chapter' ) ); } ?>
         <?php
             if($post->ID == 23) {
                 echo '<a href="/">&laquo; Introduction & Preface</a>';
@@ -18,10 +18,12 @@
         ?>
     </li>
     <li class="pull-right">
-        <?php if(get_next_post()) { next_post_link('%link', 'Next Chapter &raquo;'); } ?>
+        <?php if(get_next_post()) { next_post_link_plus( array('post_type' => ' "chapter" ', 'link' => 'Next Chapter' ) ); } ?>
     </li>
 </ul>
 <div class="clearfix"></div>
 <p class="text-center toc">
     <a href="/table-of-contents/">Table of Contents</a>
 </p>
+
+
