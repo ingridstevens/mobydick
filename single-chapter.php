@@ -1,10 +1,16 @@
 <div class="page-header">
   <h1>
 <?php
-      //put the piklist chapter_number
-      echo 'Chapter ', get_post_meta($post->ID, 'chapter_number', true), '<br>';
+// defined chapter_number, if it's an epilogue (-1), then adopt a different layout
+    $chapter_number = get_post_meta($post->ID, 'chapter_number', true);
+
+    if( $chapter_number !== "-1" ) {
+        echo 'Chapter ', $chapter_number, '<br> <span class="small">', roots_title(), '</span>';
+    }
+    else {
+        echo roots_title();
+    }
 ?>
-    <span class="small"><?php echo roots_title(); ?></span>
   </h1>
 </div>
 

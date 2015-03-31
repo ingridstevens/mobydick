@@ -1,6 +1,9 @@
-<?php get_template_part('templates/page', 'header'); ?>
+<?php 
+//Table of Contents -- display links to all chapters, intro, preface, epilogue.
 
-<?php $args = array(
+get_template_part('templates/page', 'header');
+
+$args = array(
 	'posts_per_page'   => -1,
 	'orderby'          => 'menu_order',
 	'order'            => 'ASC',
@@ -19,11 +22,21 @@
     </li>
 <?php
 $myposts = get_posts( $args );
-foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+foreach ( $myposts as $post ) {
+    setup_postdata( $post ); 
+    $chapter_number = get_post_meta($post->ID, 'chapter_number', true);
+?>
 	<li>
-		<a href="<?php the_permalink(); ?>"><?php echo 'Chapter ', get_post_meta($post->ID, 'chapter_number', true), ': ';?><?php the_title(); ?></a>
+		<a href="<?php the_permalink(); ?>">
+            <?php 
+            if( $chapter_number !== "-1" ) {
+                echo 'Chapter ', $chapter_number, ': ';
+            }
+            the_title();
+            ?>
+        </a>
 	</li>
-<?php endforeach;
+<?php } //end foreach
 wp_reset_postdata();?>
 
 </ul>
